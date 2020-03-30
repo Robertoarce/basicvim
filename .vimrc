@@ -52,6 +52,6 @@ set expandtab
 set number
 set mouse=a
 
-
+colorscheme elflord
 
 
