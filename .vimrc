@@ -39,18 +39,29 @@
 "
 "
 "
+"
+" copy (write) highlighted text to .vimbuffer
+ vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" " paste from buffer
+map <C-v> :r ~/.vimbuffer<CR>
+"
+"
 " "------------------------------------
 " "------------------------------------
 " "------------------------------------
 "
+set belloff=all
+
  syntax on
 " show existing tab with 4 spaces width
  set tabstop=4
  " when indenting with '>', use 4 spaces width
  set shiftwidth=4
 " On pressing tab, insert 4 spaces
- set expandtab
+" set expandtab
  set number
  set mouse=a
 "
- colorscheme elflord
+colorscheme elflord
+
+set encoding=utf-8
